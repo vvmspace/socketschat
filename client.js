@@ -9,9 +9,9 @@ strings = {
 window.onload = function() {
 // Создаем соединение с сервером; websockets почему-то в Хроме не работают, используем xhr
 if (navigator.userAgent.toLowerCase().indexOf('chrome') != -1) {
-	socket = io.connect('http://46.182.31.65:8080', {'transports': ['xhr-polling']});
+	socket = io.connect('http://dev.vvm.space:8080', {'transports': ['xhr-polling']});
 } else {
-	socket = io.connect('http://46.182.31.65:8080');
+	socket = io.connect('http://dev.vvm.space:8080');
 }
 socket.on('connect', function () {
 	socket.on('message', function (msg) {
